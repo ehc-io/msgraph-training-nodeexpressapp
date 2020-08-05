@@ -1,13 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-// <TokensSnippet>
 module.exports = {
   getAccessToken: async function(req) {
     if (req.user) {
       // Get the stored token
       var storedToken = req.user.oauthToken;
-
+      // console.log(storedToken)
       if (storedToken) {
         if (storedToken.expired()) {
           // refresh token
@@ -24,4 +23,3 @@ module.exports = {
     }
   }
 };
-// </TokensSnippet>

@@ -43,7 +43,6 @@ router.get('/',
       } else {
         req.flash('error_msg', 'Could not get an access token');
       }
-
       res.render('calendar', params);
     }
   }

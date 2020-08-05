@@ -11,8 +11,6 @@ module.exports = {
     const user = await client.api('/me').get();
     return user;
   },
-
-  // <GetEventsSnippet>
   getEvents: async function(accessToken) {
     const client = getAuthenticatedClient(accessToken);
 
@@ -23,8 +21,17 @@ module.exports = {
       .get();
 
     return events;
+  },
+  getNotes: async function(accessToken) {
+    const client = getAuthenticatedClient(accessToken);
+
+    const notes = await client
+      .api('/me/onenote/sections/0-F50B34572722FE28!6579/pages')
+      .select('title,links,lastModifiedDateTime')
+      .orderby('lastModifiedDateTime DESC')
+      .get();
+    return notes;    
   }
-  // </GetEventsSnippet>
 };
 
 function getAuthenticatedClient(accessToken) {

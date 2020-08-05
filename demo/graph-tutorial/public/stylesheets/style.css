@@ -7,3 +7,9 @@ body {
   word-break: break-all;
   white-space: pre-wrap;
 }
+
+.token {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}

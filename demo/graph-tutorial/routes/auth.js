@@ -20,7 +20,6 @@ router.get('/signin',
   }
 );
 
-// <CallbackRouteSnippet>
 router.post('/callback',
   function(req, res, next) {
     passport.authenticate('azuread-openidconnect',
@@ -33,7 +32,6 @@ router.post('/callback',
     )(req,res,next);
   }
 );
-// </CallbackRouteSnippet>
 
 router.get('/signout',
   function(req, res) {

@@ -1,0 +1,24 @@
+<!-- Copyright (c) Microsoft Corporation.
+     Licensed under the MIT License. -->
+
+<!-- <LayoutSnippet> -->
+<h1>OneNote Notes</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">link</th>
+            <th scope="col">Last Modified</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each events}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td><a href={{this.links.oneNoteWebUrl.href}} target="_blank">link</a></td>
+            <td>{{eventDateTime this.lastModifiedDateTime}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<!-- </LayoutSnippet> -->
