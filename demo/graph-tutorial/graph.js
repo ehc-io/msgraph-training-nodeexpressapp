@@ -26,7 +26,7 @@ module.exports = {
     const client = getAuthenticatedClient(accessToken);
 
     const notes = await client
-      .api('/me/onenote/sections/0-F50B34572722FE28!6579/pages')
+      .api('/me/onenote/sections/0-F50B34572722FE28!8593/pages')
       .select('title,links,lastModifiedDateTime')
       .orderby('lastModifiedDateTime DESC')
       .get();
