@@ -27,7 +27,6 @@ router.get('/',
       }
 
       params.accessToken = accessToken;
-      // console.log(accessToken)
       res.render('index', params);
     }
     });

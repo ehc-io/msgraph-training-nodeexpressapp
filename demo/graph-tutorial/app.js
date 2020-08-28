@@ -55,6 +55,9 @@ async function signInComplete(iss, sub, profile, accessToken, refreshToken, para
   } catch (err) {
     return done(err);
   }
+  // console.log(`here's the parameters:`);
+  // console.log(params);
+  // console.log('-----')
   // Create a simple-oauth2 token from raw tokens
   let oauthToken = oauth2.accessToken.create(params);
   // Save the profile and tokens in user storage
